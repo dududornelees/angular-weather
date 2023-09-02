@@ -1,11 +1,11 @@
 <div class="container">
   <div class="temp-container">
-    <img class="temp-image" src="../../../../../assets/images/sun.jpg" *ngIf="weatherData.main.temp >= 15" />
-    <img class="temp-image" src="../../../../../assets/images/cold-1.jpg" *ngIf="weatherData.main.temp < 15" />
+    <img loading="lazy" class="temp-image" src="../../../../../assets/images/sun.jpg" *ngIf="weatherData.main.temp >= 15" />
+    <img loading="lazy" class="temp-image" src="../../../../../assets/images/cold-1.jpg" *ngIf="weatherData.main.temp < 15" />
     <div class="temp-containe-backdrop"></div>
 
     <h2 class="temp-title">{{ weatherData.main.temp.toFixed(0) }} °C</h2>
-    <h4 class="city-name">{{ cityName }}</h4>
+    <h4 class="city-name">{{ weatherData.name }}</h4>
   </div>
 
   <div class="more-info-container">

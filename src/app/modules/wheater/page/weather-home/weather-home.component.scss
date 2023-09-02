@@ -15,8 +15,14 @@
       border-radius: 8px;
       outline: none;
       width: 85%;
-      border: 1px solid var(--primary);
+      border: 2px solid var(--primary);
       font-size: 14px;
+      background: transparent;
+      color: white;
+
+      &::placeholder {
+        color: #cccccc;
+      }
     }
 
     span {

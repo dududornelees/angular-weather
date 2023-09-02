@@ -11,34 +11,40 @@ import { Subject, takeUntil } from 'rxjs';
 })
 export class WeatherHomeComponent implements OnInit, OnDestroy {
   private readonly destroy$: Subject<void> = new Subject();
-  initialCity = "Porto Alegre";
-  searchedCity = this.initialCity;
+  initialCity = "";
   weatherData!: WeatherData;
   searchIcon = faMagnifyingGlass;
   isLoading = false;
+  isError = false;
 
   constructor(private weatherService: WeatherService) {}
 
   ngOnInit() {
-    this.getWeatherData(this.initialCity);
+    this.getWeatherData("Porto Alegre");
   }
 
   getWeatherData(city: string) {
     this.isLoading = true;
+    this.isError = false;
 
     this.weatherService
     .getWeatherData(city)
     .pipe(takeUntil(this.destroy$))
     .subscribe({
-      next: (res) => this.weatherData = res,
+      next: (res) => {
+        this.weatherData = res;
+        this.isError = false;
+      },
       complete: () => this.isLoading = false,
-      error: (error) => console.log(error)
+      error: (error) => {
+        this.isError = true;
+        this.isLoading = false;
+      }
     });
   }
 
   onSubmit() {
     this.getWeatherData(this.initialCity);
-    this.searchedCity = this.initialCity;
     this.initialCity = "";
   }
 
