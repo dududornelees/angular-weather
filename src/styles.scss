@@ -1,3 +1,8 @@
+:root {
+  --primary: #7c3aed;
+  --primary-hover: #6d28d9;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,4 +11,5 @@
 
 body {
   box-sizing: border-box;
+  background-color: #27272a;
 }
