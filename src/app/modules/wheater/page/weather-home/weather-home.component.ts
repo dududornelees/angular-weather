@@ -12,8 +12,10 @@ import { Subject, takeUntil } from 'rxjs';
 export class WeatherHomeComponent implements OnInit, OnDestroy {
   private readonly destroy$: Subject<void> = new Subject();
   initialCity = "Porto Alegre";
+  searchedCity = this.initialCity;
   weatherData!: WeatherData;
   searchIcon = faMagnifyingGlass;
+  isLoading = false;
 
   constructor(private weatherService: WeatherService) {}
 
@@ -22,17 +24,21 @@ export class WeatherHomeComponent implements OnInit, OnDestroy {
   }
 
   getWeatherData(city: string) {
+    this.isLoading = true;
+
     this.weatherService
     .getWeatherData(city)
     .pipe(takeUntil(this.destroy$))
     .subscribe({
-      next: (res) => console.log(res),
+      next: (res) => this.weatherData = res,
+      complete: () => this.isLoading = false,
       error: (error) => console.log(error)
     });
   }
 
   onSubmit() {
     this.getWeatherData(this.initialCity);
+    this.searchedCity = this.initialCity;
     this.initialCity = "";
   }
 

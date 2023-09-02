@@ -1,0 +1,20 @@
+.container {
+  width: 100%;
+  border-radius: 8px;
+  height: 487px;
+  background-color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  fa-icon {
+    font-size: 26px;
+    color: white;
+    animation: spin 2s infinite;
+  }
+
+  @keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+  }
+}

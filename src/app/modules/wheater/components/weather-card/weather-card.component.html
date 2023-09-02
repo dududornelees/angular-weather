@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="temp-container">
+    <img class="temp-image" src="../../../../../assets/images/sun.jpg" *ngIf="weatherData.main.temp >= 15" />
+    <img class="temp-image" src="../../../../../assets/images/cold-1.jpg" *ngIf="weatherData.main.temp < 15" />
+    <div class="temp-containe-backdrop"></div>
+
+    <h2 class="temp-title">{{ weatherData.main.temp.toFixed(0) }} °C</h2>
+    <h4 class="city-name">{{ cityName }}</h4>
+  </div>
+
+  <div class="more-info-container">
+    <h4>Mais informações</h4>
+
+    <div class="more-info-temp-container">
+      <div class="more-info-temp">
+        <fa-icon [icon]="minTempIcon"></fa-icon>
+        <p>Mínima: {{ weatherData.main.temp_min.toFixed(0) }} °C</p>
+      </div>
+
+      <div class="more-info-temp">
+        <fa-icon [icon]="maxTempIcon"></fa-icon>
+        <p>Máxima: {{ weatherData.main.temp_max.toFixed(0) }} °C</p>
+      </div>
+
+      <div class="more-info-temp">
+        <fa-icon [icon]="humidityIcon"></fa-icon>
+        <p>Humidade: {{ weatherData.main.humidity.toFixed(0) }}%</p>
+      </div>
+
+      <div class="more-info-temp">
+        <fa-icon [icon]="windIcon"></fa-icon>
+        <p>Vento: {{ weatherData.wind.speed.toFixed(1) }} km/h</p>
+      </div>
+    </div>
+  </div>
+</div>
