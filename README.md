@@ -1,27 +1,55 @@
-# AngularWeather
+<h1 align="center">Angular Weather</h1>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.1.
+<p align="center">Site desenvolvido com Angular, para realizar consultas por previsões do tempo.<p>
 
-## Development server
+<p align="center">
+    <a href="#pre-requisitos">Pré-Requisitos</a> •
+    <a href="#rodando-a-aplicacao">Rodando a Aplicação</a> •
+    <a href="#tecnologias">Tecnologias</a> •
+    <a href="#autor">Autor</a>
+<p>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+---
 
-## Code scaffolding
+<h3 id="pre-requisitos">Pré-Requisitos</h3>
+Antes de começar, você vai precisar ter instalado em sua máquina as seguinte ferramentas: <a href="https://git-scm.com" target="_blank">Git</a>, <a href="https://nodejs.org/en/" target="_blank">Node.js</a>. <br>
+Além disto, é bom ter um editor para trabalhar com o código, como o <a href="https://code.visualstudio.com/" target="_blank">VSCode</a>.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+---
 
-## Build
+<h3 id="rodando-a-aplicacao">Rodando a Aplicação</h3>
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```bash
+# Clone o repositório
+$ git clone https://github.com/dududornelees/angular-weather.git
+# Acesse a pasta do projeto no terminal
+$ cd angular-weather
+# Instale as dependências
+$ npm i
+# Inicie a aplicação
+$ npm start
+# O servidor iniciará na porta: 4200. Acesse http://localhost:4200/
+```
 
-## Running unit tests
+---
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+<h3 id="tecnologias">Tecnologias</h3>
+As seguintes ferramentas foram utilizadas na construção deste projeto:
 
-## Running end-to-end tests
+-   [Angular](https://angular.io/)
+-   [TypeScript](https://www.typescriptlang.org/)
+-   [SCSS](https://sass-lang.com/)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+---
 
-## Further help
+<h3><a target="_blank" href="https://angular-weather-nu.vercel.app/weather">Abrir aplicação</a></h3>
+<p>Clique no link acima para abrir a aplicação no seu navegador.</p>
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+---
+
+<h3 id="autor">Autor</h3>
+<img src="https://avatars.githubusercontent.com/dududornelees" height="100" />
+
+Made with 💙 by Eduardo Dorneles 👋.
+
+[![LinkedIn Badge](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/dududornelees/) [![Website Badge](https://img.shields.io/badge/website-14141C?style=for-the-badge&logo=About.me&logoColor=white)](https://dududornelees.com.br/)
