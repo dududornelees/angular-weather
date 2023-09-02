@@ -1,6 +1,6 @@
 <div class="container">
   <form class="form-container" #form="ngForm" (submit)="onSubmit()">
-    <input type="text" placeholder="Digite o estado, município ou cidade..." name="city" [(ngModel)]="initialCity">
+    <input type="search" placeholder="Digite o estado, município ou cidade..." name="city" [(ngModel)]="initialCity">
 
     <span (click)="onSubmit()">
       <fa-icon style="cursor: pointer;" size="lg" class="search-icon" [icon]="searchIcon"></fa-icon>
